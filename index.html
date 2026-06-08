@@ -318,6 +318,40 @@
   .day-strip .day-date { font-size: 22px; font-weight: 800; color: var(--sage); letter-spacing: 2px; margin-bottom: 4px; }
   .day-strip .day-meta { font-size: 11px; color: var(--muted); letter-spacing: 1.5px; }
 
+  /* Route Map */
+  .map-section {
+    margin: 0 24px 12px;
+    background: var(--cream);
+    border: 1px solid var(--sand-dk);
+    border-radius: var(--radius);
+    padding: 16px 16px 14px;
+  }
+  .map-section h2 {
+    font-size: 14px; color: var(--dark);
+    margin-bottom: 10px; text-align: center;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .map-section h2 .icon {
+    width: 24px; height: 24px; background: var(--sand);
+    border-radius: 6px; display: flex; align-items: center;
+    justify-content: center; font-size: 12px; color: var(--sage);
+  }
+  .map-img-wrap {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--sand-dk);
+    background: var(--white);
+    cursor: pointer;
+  }
+  .map-img-wrap img {
+    width: 100%; height: auto; display: block;
+  }
+  .map-caption {
+    font-size: 11px; color: var(--muted);
+    text-align: center; margin-top: 8px; line-height: 1.6;
+  }
+
 
   /* hero parallax */
   .hero { position: relative; }
@@ -358,6 +392,15 @@
   <div class="tag">专业合作</div>
   <div class="orgs">南通广电国旅<span class="x">×</span>七彩和弦童声学院</div>
   <div class="sub">30年专业旅游 · 少儿声乐领军</div>
+</div>
+
+<!-- ROUTE MAP — 卡通手绘路线图（4:3） -->
+<div class="map-section">
+  <h2><span class="icon">🗺</span> 8 天 7 夜 · 路线一览</h2>
+  <div class="map-img-wrap" onclick="openLightbox(this.querySelector('img').src)">
+    <img src="images/route-map.jpg" alt="童声唱享伊犁河 8天7夜 路线图">
+  </div>
+  <div class="map-caption">伊宁 → 赛里木湖 → 六星街 → 喀拉峻 → 特克斯 → 那拉提 → 独库 → 乌鲁木齐</div>
 </div>
 
 <!-- DAY STRIP -->
