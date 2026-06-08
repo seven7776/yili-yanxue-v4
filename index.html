@@ -278,17 +278,22 @@
   .contact-row:last-child { margin-bottom: 0; }
   .contact-row .qr {
     flex-shrink: 0;
-    width: 64px; height: 64px;
-    background: var(--cream);
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid var(--sand-dk);
+    width: 100px; height: 100px;
+    background: white;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
   }
   .contact-row .qr img { width: 100%; height: 100%; display: block; }
   .contact-row .info { flex: 1; }
   .contact-row .name {
-    font-size: 14px; font-weight: 700; color: var(--dark);
-    margin-bottom: 2px;
+    font-size: 15px; font-weight: 700; color: var(--dark);
+    margin-bottom: 4px;
+  }
+  .contact-row .scan-tip {
+    font-size: 10px; color: var(--terrac);
+    margin-top: 4px; font-weight: 600;
   }
   .contact-row .phone {
     font-size: 13px; color: var(--sage); font-weight: 600;
@@ -748,6 +753,7 @@
     <div class="info">
       <div class="name">湘湘老师</div>
       <div class="phone">153 0629 5776</div>
+      <div class="scan-tip">长按或截图扫码加微信</div>
     </div>
   </a>
   <a href="tel:15371929776" class="contact-row">
@@ -755,6 +761,7 @@
     <div class="info">
       <div class="name">蕾蕾老师</div>
       <div class="phone">153 7192 9776</div>
+      <div class="scan-tip">长按或截图扫码加微信</div>
     </div>
   </a>
   <a href="tel:15371959776" class="contact-row">
@@ -762,9 +769,10 @@
     <div class="info">
       <div class="name">橘子老师</div>
       <div class="phone">153 7195 9776</div>
+      <div class="scan-tip">长按或截图扫码加微信</div>
     </div>
   </a>
-  <div class="contact-qr-tip">长按识别二维码 · 加客服微信 / 点击拨打电话</div>
+  <div class="contact-qr-tip">点击电话框拨打 · 长按二维码加客服微信</div>
 </div>
 
 <!-- STEPS -->
