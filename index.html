@@ -134,6 +134,70 @@
   .price-note { font-size: 12px; color: var(--muted); margin-top: 6px; }
   .price-note strong { color: var(--terrac); }
 
+  /* 儿童双价 — pill + 箭头 */
+  .child-price-row {
+    margin-top: 10px;
+    display: flex; align-items: center; justify-content: center;
+    gap: 6px; flex-wrap: wrap;
+    font-size: 12px; color: var(--dark);
+    background: rgba(255,255,255,.55);
+    padding: 9px 10px;
+    border-radius: 10px;
+    border: 1px dashed var(--sand-dk);
+  }
+  .child-tag {
+    font-weight: 700;
+    color: var(--terrac);
+    margin-right: 4px;
+    font-size: 12px;
+  }
+  .child-pill {
+    background: white;
+    border: 1px solid var(--sand-dk);
+    padding: 3px 9px;
+    border-radius: 8px;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .child-pill b {
+    color: var(--dark); font-size: 14px; font-weight: 800;
+    margin: 0 1px;
+  }
+  .child-arrow {
+    color: var(--terrac); font-weight: 700; font-size: 14px;
+  }
+
+  /* 家庭套餐 combo-card */
+  .combo-card {
+    margin: 12px 24px 0;
+    background: linear-gradient(135deg, var(--cream), white);
+    border: 1px solid var(--sand-dk);
+    border-radius: var(--radius);
+    padding: 14px 16px 12px;
+  }
+  .combo-title {
+    font-size: 12px; color: var(--terrac);
+    letter-spacing: 2px; font-weight: 700;
+    margin-bottom: 10px; text-align: center;
+  }
+  .combo-list { display: flex; gap: 10px; margin-bottom: 10px; }
+  .combo-item {
+    flex: 1;
+    background: white;
+    border: 1px solid var(--sand-dk);
+    border-radius: 8px;
+    padding: 10px 8px;
+    text-align: center;
+  }
+  .combo-name { font-size: 12px; color: var(--muted); margin-bottom: 4px; font-weight: 600; }
+  .combo-price { font-size: 18px; font-weight: 800; color: var(--dark); letter-spacing: 0.5px; }
+  .combo-note {
+    font-size: 11px; color: var(--muted);
+    text-align: center; line-height: 1.6;
+  }
+  .combo-note strong { color: var(--terrac); }
+
   /* Section */
   .section { padding: 28px 24px 0; }
   .section h2 { font-size: 16px; font-weight: 700; color: var(--dark); display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
@@ -189,39 +253,51 @@
   .cert-card p { color: var(--muted); font-size: 10px; }
   .cert-note { font-size: 10px; color: var(--muted); margin-top: 10px; font-style: italic; }
 
-  /* Contact (校区客服) */
+  /* 校区客服 — 3 横框（每老师 1 个：QR + 姓名 + 电话） */
   .contact-card {
     margin: 0 24px 8px;
     background: var(--cream);
     border: 1px solid var(--sand-dk);
     border-radius: var(--radius);
-    padding: 20px 18px 18px;
-    text-align: center;
+    padding: 16px 14px;
   }
-  .contact-qr {
-    display: inline-block;
+  .contact-row {
+    display: flex; align-items: center; gap: 12px;
     background: var(--white);
-    padding: 6px;
+    border: 1px solid var(--sand-dk);
     border-radius: 10px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    color: var(--dark);
+  }
+  .contact-row:last-child { margin-bottom: 0; }
+  .contact-row .qr {
+    flex-shrink: 0;
+    width: 64px; height: 64px;
+    background: var(--cream);
+    border-radius: 8px;
+    overflow: hidden;
     border: 1px solid var(--sand-dk);
   }
-  .contact-qr img { width: 140px; height: 140px; display: block; }
-  .contact-qr-row {
-    display: flex; justify-content: center; gap: 14px;
-    flex-wrap: wrap;
+  .contact-row .qr img { width: 100%; height: 100%; display: block; }
+  .contact-row .info { flex: 1; }
+  .contact-row .name {
+    font-size: 14px; font-weight: 700; color: var(--dark);
+    margin-bottom: 2px;
   }
-  .qr-block { text-align: center; }
-  .qr-label {
-    font-size: 12px; color: var(--dark); font-weight: 700;
-    margin-top: 6px;
+  .contact-row .phone {
+    font-size: 13px; color: var(--sage); font-weight: 600;
+    letter-spacing: 0.5px;
   }
-  .qr-label-tip {
-    font-size: 10px; color: var(--muted);
-    margin-top: 2px;
+  .contact-row .phone::after {
+    content: " 📞";
+    font-size: 11px;
+    opacity: 0.7;
   }
   .contact-qr-tip {
     font-size: 11px; color: var(--muted);
-    margin-top: 10px; line-height: 1.6;
+    text-align: center; margin-top: 10px; line-height: 1.6;
   }
   .contact-list {
     margin-top: 14px;
@@ -420,8 +496,29 @@
     <span class="all">一价全含</span>
   </div>
   <div class="price-note">早鸟 <strong>6/20 零点截止</strong>，起恢复¥16,800</div>
-  <div class="price-note" style="margin-top:8px; color: var(--dark); font-weight: 600;">💫 12 岁以下不占床 早鸟 <span style="color: var(--dark); font-size: 17px; font-weight: 700;">¥13,800/人</span> · 6/20 起 <span style="color: var(--dark); font-size: 17px; font-weight: 700;">¥14,800/人</span></div>
+  <div class="child-price-row">
+    <span class="child-tag">💫 12 岁以下不占床</span>
+    <span class="child-pill">早鸟 <b>¥13,800</b>/人</span>
+    <span class="child-arrow">→</span>
+    <span class="child-pill">6/20 起 <b>¥14,800</b>/人</span>
+  </div>
   <div class="price-note" style="margin-top:4px;">一价全含 · 无隐性消费</div>
+</div>
+
+<!-- 家庭套餐 -->
+<div class="combo-card">
+  <div class="combo-title">家庭套餐 · 早鸟价</div>
+  <div class="combo-list">
+    <div class="combo-item">
+      <div class="combo-name">一大一小</div>
+      <div class="combo-price">¥29,600</div>
+    </div>
+    <div class="combo-item">
+      <div class="combo-name">两大一小</div>
+      <div class="combo-price">¥45,400</div>
+    </div>
+  </div>
+  <div class="combo-note">12 岁以下儿童不占床 · <strong>10 组家庭成团</strong>，每组至少一大一小<br>6/20 后正价 ¥31,600 / ¥48,400</div>
 </div>
 
 <!-- HIGHLIGHTS -->
@@ -523,7 +620,7 @@
     <div class="day-header">
       <div class="day-left">
         <span class="day-num">Day 3</span>
-        <span class="day-title">果子沟+六星街+喀赞其</span>
+        <span class="day-title">果子沟 六星街 喀赞其</span>
       </div>
       <span class="day-stay">伊宁花城酒店或同级</span>
     </div>
@@ -553,12 +650,12 @@
     <div class="day-header">
       <div class="day-left">
         <span class="day-num">Day 5</span>
-        <span class="day-title">喀拉峻+特克斯</span>
+        <span class="day-title">喀拉峻 特克斯</span>
       </div>
       <span class="day-stay">特克斯美豪丽致酒店或同级</span>
     </div>
     <div class="day-body">
-      <img class="section-img" src="images/day-05-kalajun.jpg" alt="喀拉峻+特克斯" style="margin-bottom:8px;">
+      <img class="section-img" src="images/day-05-kalajun.jpg" alt="喀拉峻 特克斯" style="margin-bottom:8px;">
       <div class="day-theme">喀拉峻家访 · 挤羊奶 · 八卦城夜游</div>
       <div class="day-detail">哈萨克族家访（手抓饭+包尔萨克），挤羊奶体验，学一句哈萨克语；晚上特克斯八卦城夜游。</div>
     </div>
@@ -645,12 +742,12 @@
   <h2>权威研学证书</h2>
   <div class="cert-grid">
     <div class="cert-card">
-      <h3>南通盖章</h3>
-      <p>深红章 · 官方权威认证</p>
+      <h3>南通广电</h3>
+      <p>深红章 · 盖章</p>
     </div>
     <div class="cert-card">
-      <h3>伊宁盖章</h3>
-      <p>深蓝章 · 官方权威认证</p>
+      <h3>伊宁文旅</h3>
+      <p>深蓝章 · 盖章</p>
     </div>
   </div>
   <div class="cert-note">证书含：营员姓名 / 营期时间 / 活动名称</div>
@@ -661,23 +758,28 @@
   <h2><span class="icon">✦</span> 校区客服</h2>
 </div>
 <div class="contact-card">
-  <div class="contact-qr-row">
-    <div class="qr-block">
-      <div class="contact-qr">
-        <img src="images/qrcode.jpg" alt="校区客服二维码">
-      </div>
-      <div class="qr-label">校区客服</div>
-      <div class="qr-label-tip">湘湘 / 蕾蕾</div>
+  <a href="tel:15306295776" class="contact-row">
+    <div class="qr"><img src="images/qrcode.jpg" alt="湘湘老师二维码"></div>
+    <div class="info">
+      <div class="name">湘湘老师</div>
+      <div class="phone">153 0629 5776</div>
     </div>
-    <div class="qr-block">
-      <div class="contact-qr">
-        <img src="images/qrcode-orange.jpg" alt="橘子老师二维码">
-      </div>
-      <div class="qr-label">橘子老师</div>
-      <div class="qr-label-tip">专属客服</div>
+  </a>
+  <a href="tel:15371929776" class="contact-row">
+    <div class="qr"><img src="images/qrcode-leilei.jpg" alt="蕾蕾老师二维码"></div>
+    <div class="info">
+      <div class="name">蕾蕾老师</div>
+      <div class="phone">153 7192 9776</div>
     </div>
-  </div>
-  <div class="contact-qr-tip">长按识别二维码 · 加客服微信</div>
+  </a>
+  <a href="tel:15371959776" class="contact-row">
+    <div class="qr"><img src="images/qrcode-orange.jpg" alt="橘子老师二维码"></div>
+    <div class="info">
+      <div class="name">橘子老师</div>
+      <div class="phone">153 7195 9776</div>
+    </div>
+  </a>
+  <div class="contact-qr-tip">长按识别二维码 · 加客服微信 / 点击拨打电话</div>
   <div class="contact-list">
     <a href="tel:15306295776" class="contact-item">
       <span class="contact-name">湘湘老师</span>
