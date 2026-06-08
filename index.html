@@ -741,7 +741,7 @@
 <div class="section" style="padding-top:20px;">
   <h2><span class="icon">✦</span> 校区客服</h2>
 </div>
-<div class="contact-card">
+<div class="contact-card" id="contact-section">
   <a href="tel:15306295776" class="contact-row">
     <div class="qr"><img src="images/qrcode.jpg" alt="湘湘老师二维码"></div>
     <div class="info">
@@ -805,7 +805,7 @@
 <div class="cta-section">
   <h2>早鸟 6/20 零点截止</h2>
   <p>联系七彩和弦童声学院客服报名</p>
-  <a href="#" class="cta-btn">立即咨询</a>
+  <a href="#contact-section" class="cta-btn">立即咨询</a>
   <p class="cta-note">早鸟价 ¥15,800 一价全含 · 6/20 零点截止</p>
 </div>
 
@@ -825,7 +825,7 @@
 
 <!-- FLOATING CTA -->
 <div class="fcta" id="fcta">
-  <a href="javascript:void(0)" onclick="document.querySelector('.cta-btn').scrollIntoView({behavior:'smooth'})">立即咨询 ✦</a>
+  <a href="javascript:void(0)" onclick="document.getElementById('contact-section').scrollIntoView({behavior:'smooth', block:'start'})">立即咨询 ✦</a>
 </div>
 
 <script>
