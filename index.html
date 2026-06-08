@@ -266,13 +266,12 @@
     padding: 16px 14px;
   }
   .contact-row {
-    display: flex; align-items: center; gap: 12px;
+    display: flex; align-items: center; gap: 14px;
     background: var(--white);
     border: 1px solid var(--sand-dk);
     border-radius: 10px;
-    padding: 10px 12px;
+    padding: 12px;
     margin-bottom: 8px;
-    text-decoration: none;
     color: var(--dark);
   }
   .contact-row:last-child { margin-bottom: 0; }
@@ -296,8 +295,14 @@
     margin-top: 4px; font-weight: 600;
   }
   .contact-row .phone {
-    font-size: 13px; color: var(--sage); font-weight: 600;
+    display: inline-block;
+    font-size: 14px; color: var(--sage); font-weight: 700;
     letter-spacing: 0.5px;
+    text-decoration: none;
+    background: var(--cream);
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--sand-dk);
   }
   .contact-row .phone::after {
     content: " 📞";
@@ -748,31 +753,31 @@
   <h2><span class="icon">✦</span> 校区客服</h2>
 </div>
 <div class="contact-card" id="contact-section">
-  <a href="tel:15306295776" class="contact-row">
+  <div class="contact-row">
     <div class="qr"><img src="images/qrcode.jpg" alt="湘湘老师二维码"></div>
     <div class="info">
       <div class="name">湘湘老师</div>
-      <div class="phone">153 0629 5776</div>
+      <a href="tel:15306295776" class="phone">153 0629 5776</a>
       <div class="scan-tip">长按或截图扫码加微信</div>
     </div>
-  </a>
-  <a href="tel:15371929776" class="contact-row">
+  </div>
+  <div class="contact-row">
     <div class="qr"><img src="images/qrcode-leilei.jpg" alt="蕾蕾老师二维码"></div>
     <div class="info">
       <div class="name">蕾蕾老师</div>
-      <div class="phone">153 7192 9776</div>
+      <a href="tel:15371929776" class="phone">153 7192 9776</a>
       <div class="scan-tip">长按或截图扫码加微信</div>
     </div>
-  </a>
-  <a href="tel:15371959776" class="contact-row">
+  </div>
+  <div class="contact-row">
     <div class="qr"><img src="images/qrcode-orange.jpg" alt="橘子老师二维码"></div>
     <div class="info">
       <div class="name">橘子老师</div>
-      <div class="phone">153 7195 9776</div>
+      <a href="tel:15371959776" class="phone">153 7195 9776</a>
       <div class="scan-tip">长按或截图扫码加微信</div>
     </div>
-  </a>
-  <div class="contact-qr-tip">点击电话框拨打 · 长按二维码加客服微信</div>
+  </div>
+  <div class="contact-qr-tip">点电话按钮拨打 · 长按二维码加客服微信</div>
 </div>
 
 <!-- STEPS -->
