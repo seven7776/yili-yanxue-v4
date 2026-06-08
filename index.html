@@ -206,6 +206,19 @@
     border: 1px solid var(--sand-dk);
   }
   .contact-qr img { width: 140px; height: 140px; display: block; }
+  .contact-qr-row {
+    display: flex; justify-content: center; gap: 14px;
+    flex-wrap: wrap;
+  }
+  .qr-block { text-align: center; }
+  .qr-label {
+    font-size: 12px; color: var(--dark); font-weight: 700;
+    margin-top: 6px;
+  }
+  .qr-label-tip {
+    font-size: 10px; color: var(--muted);
+    margin-top: 2px;
+  }
   .contact-qr-tip {
     font-size: 11px; color: var(--muted);
     margin-top: 10px; line-height: 1.6;
@@ -605,8 +618,21 @@
   <h2><span class="icon">✦</span> 校区客服</h2>
 </div>
 <div class="contact-card">
-  <div class="contact-qr">
-    <img src="images/qrcode.jpg" alt="客服微信二维码">
+  <div class="contact-qr-row">
+    <div class="qr-block">
+      <div class="contact-qr">
+        <img src="images/qrcode.jpg" alt="校区客服二维码">
+      </div>
+      <div class="qr-label">校区客服</div>
+      <div class="qr-label-tip">湘湘 / 蕾蕾</div>
+    </div>
+    <div class="qr-block">
+      <div class="contact-qr">
+        <img src="images/qrcode-orange.jpg" alt="橘子老师二维码">
+      </div>
+      <div class="qr-label">橘子老师</div>
+      <div class="qr-label-tip">专属客服</div>
+    </div>
   </div>
   <div class="contact-qr-tip">长按识别二维码 · 加客服微信</div>
   <div class="contact-list">
