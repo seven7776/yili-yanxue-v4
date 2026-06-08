@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>童声唱享伊犁河 — 伊宁暑期亲子音乐研学营</title>
+<style>
+  :root {
+    --sage:     #7A9E7F;
+    --sage-lt:  #A8BBA6;
+    --sand:     #E8DFD0;
+    --sand-dk:  #D4C5A9;
+    --cream:    #FAF8F4;
+    --terrac:   #B8917A;
+    --gold:     #C9A96E;
+    --dark:     #3D4740;
+    --muted:    #6B7368;
+    --white:    #FFFFFF;
+    --radius:   14px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--cream); color: var(--dark); line-height: 1.8; }
+  .container { max-width: 600px; margin: 0 auto; background: var(--white); }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(160deg, #7A9E7F 0%, #5C7F60 40%, #4A6350 100%);
+    color: white; padding: 48px 32px 44px; text-align: center;
+  }
+  .hero .tag-top { font-size: 12px; letter-spacing: 3px; opacity: 0.75; margin-bottom: 18px; }
+  .hero h1 { font-size: 30px; font-weight: 800; letter-spacing: 4px; margin-bottom: 6px; }
+  .hero .sub { font-size: 14px; opacity: 0.85; margin-bottom: 20px; }
+  .hero .divider { width: 40px; height: 2px; background: rgba(255,255,255,0.4); margin: 0 auto 20px; border-radius: 2px; }
+  .hero .tagline { display: inline-block; background: rgba(255,255,255,0.15); padding: 8px 24px; border-radius: 24px; font-size: 13px; letter-spacing: 1px; }
+
+  /* Price Banner */
+  .price-banner { background: var(--sand); padding: 28px 24px; text-align: center; }
+  .price-banner .label { font-size: 12px; color: var(--muted); letter-spacing: 2px; margin-bottom: 12px; }
+  .price-tag { display: inline-block; background: var(--sage); color: white; padding: 14px 36px; border-radius: 36px; margin-bottom: 8px; }
+  .price-tag .amount { font-size: 38px; font-weight: 800; }
+  .price-tag .per { font-size: 15px; opacity: 0.9; margin-left: 2px; }
+  .price-tag .all { display: block; font-size: 12px; font-weight: normal; opacity: 0.85; margin-top: 2px; letter-spacing: 1px; }
+  .price-note { font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .price-note strong { color: var(--terrac); }
+
+  /* Section */
+  .section { padding: 28px 24px 0; }
+  .section h2 { font-size: 16px; font-weight: 700; color: var(--dark); display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .section h2 .icon { width: 28px; height: 28px; background: var(--sand); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; color: var(--sage); }
+  .section h2 .icon svg { width: 14px; height: 14px; fill: var(--sage); }
+
+  /* Highlights */
+  .highlights { padding: 0 24px 8px; }
+  .highlight-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #F0EDE8; }
+  .highlight-item:last-child { border-bottom: none; }
+  .highlight-icon { width: 38px; height: 38px; background: var(--sage); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
+  .highlight-text h3 { font-size: 15px; font-weight: 600; color: var(--dark); margin-bottom: 2px; }
+  .highlight-text p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+  /* Itinerary */
+  .itinerary { padding: 8px 24px; }
+  .day-card { background: var(--cream); border-radius: var(--radius); margin-bottom: 10px; overflow: hidden; border: 1px solid var(--sand-dk); }
+  .day-header { background: var(--sage); padding: 11px 16px; display: flex; justify-content: space-between; align-items: center; }
+  .day-header .day-left { display: flex; align-items: center; gap: 8px; }
+  .day-header .day-num {
+    font-size: 12px;
+    font-weight: 700;
+    background: white;
+    color: var(--sage);
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+  .day-header .day-title { font-size: 14px; font-weight: 700; color: white; }
+  .day-header .day-stay { font-size: 10px; background: rgba(255,255,255,0.2); color: white; padding: 2px 10px; border-radius: 10px; }
+  .day-body { padding: 13px 15px; }
+  .day-theme { font-size: 13px; color: var(--sage); font-weight: 600; margin-bottom: 5px; letter-spacing: 0.5px; }
+  .day-detail { font-size: 14px; color: var(--dark); line-height: 1.75; }
+
+  /* Who */
+  .who-list { background: var(--cream); border-radius: var(--radius); margin: 0 24px 8px; overflow: hidden; border: 1px solid var(--sand-dk); }
+  .who-item { padding: 10px 14px; font-size: 13px; border-bottom: 1px solid var(--sand-dk); display: flex; align-items: center; gap: 10px; color: var(--dark); }
+  .who-item:last-child { border-bottom: none; }
+  .who-item .dot { width: 5px; height: 5px; background: var(--sage); border-radius: 50%; flex-shrink: 0; }
+
+  /* Includes */
+  .includes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 0 24px 8px; }
+  .include-item { background: var(--cream); border-radius: 10px; padding: 10px 12px; font-size: 13px; display: flex; align-items: center; gap: 8px; border: 1px solid var(--sand-dk); color: var(--dark); }
+  .include-item .check { color: var(--sage); font-size: 13px; font-weight: bold; }
+
+  /* Certificate */
+  .cert-section { margin: 16px 24px; padding: 18px; background: var(--sand); border-radius: var(--radius); text-align: center; }
+  .cert-section h2 { font-size: 15px; color: var(--dark); margin-bottom: 12px; }
+  .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .cert-card { background: white; border-radius: 10px; padding: 14px 12px; }
+  .cert-card h3 { color: var(--sage); font-size: 12px; font-weight: 700; margin-bottom: 3px; line-height: 1.5; }
+  .cert-card p { color: var(--muted); font-size: 10px; }
+  .cert-note { font-size: 10px; color: var(--muted); margin-top: 10px; font-style: italic; }
+
+  /* Steps */
+  .steps-section { padding: 8px 24px; }
+  .step-item { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .step-num { width: 34px; height: 34px; background: var(--sage); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px; flex-shrink: 0; }
+  .step-content { background: var(--cream); border-radius: 10px; padding: 11px 13px; flex: 1; border: 1px solid var(--sand-dk); }
+  .step-content h4 { font-size: 12px; font-weight: 600; margin-bottom: 2px; color: var(--dark); }
+  .step-content p { font-size: 11px; color: var(--muted); }
+
+  /* Notice */
+  .notice-list { background: var(--cream); border-radius: var(--radius); margin: 0 24px 8px; overflow: hidden; border: 1px solid var(--sand-dk); }
+  .notice-item { padding: 10px 14px; font-size: 13px; border-bottom: 1px solid var(--sand-dk); display: flex; align-items: center; gap: 10px; color: var(--dark); }
+  .notice-item:last-child { border-bottom: none; }
+  .notice-item .dot { width: 5px; height: 5px; background: var(--terrac); border-radius: 50%; flex-shrink: 0; }
+
+  /* CTA */
+  .cta-section { padding: 32px 24px; text-align: center; background: var(--sage); color: white; }
+  .cta-section h2 { font-size: 19px; font-weight: 700; margin-bottom: 6px; }
+  .cta-section p { font-size: 12px; opacity: 0.9; margin-bottom: 20px; }
+  .cta-btn { display: inline-block; background: white; color: var(--sage); padding: 13px 40px; border-radius: 30px; font-size: 14px; font-weight: 700; text-decoration: none; }
+  .cta-note { font-size: 11px; opacity: 0.8; margin-top: 10px; }
+
+  /* Footer */
+  .footer { padding: 20px 24px; text-align: center; color: var(--muted); font-size: 11px; border-top: 1px solid var(--sand-dk); }
+  .footer .org { color: var(--dark); font-size: 11px; font-weight: 600; margin-bottom: 4px; }
+
+  /* === ENHANCED STYLES === */
+  .hero-wrap { position: relative; overflow: hidden; }
+  .hero-img { width: 100%; height: 100%; object-fit: cover; opacity: 0.35; position: absolute; inset: 0; animation: breathe 8s ease-in-out infinite; }
+  @keyframes breathe { 0%,100%{opacity:0.3;transform:scale(1)} 50%{opacity:0.45;transform:scale(1.03)} }
+
+  /* fade-in on scroll */
+  .fade-up { opacity: 0; transform: translateY(28px); transition: opacity .6s ease, transform .6s ease; }
+  .fade-up.visible { opacity: 1; transform: none; }
+  .delay-1 { transition-delay: .1s }
+  .delay-2 { transition-delay: .2s }
+  .delay-3 { transition-delay: .3s }
+
+  /* itinerary accordion */
+  .day-card { }
+
+  .day-card .day-body { display: block; }
+
+
+  /* section images */
+  .section-img { width: 100%; border-radius: 12px; margin: 8px 0 4px; object-fit: cover; max-height: 180px; }
+
+  /* image gallery */
+  .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 0 24px 8px; }
+  .gallery img { width: 100%; height: 110px; object-fit: cover; border-radius: 10px; cursor: pointer; transition: transform .3s, box-shadow .3s; }
+  .gallery img:hover { transform: scale(1.04); box-shadow: 0 6px 24px rgba(0,0,0,.18); }
+
+  /* lightbox */
+  .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,.88); display: flex; align-items: center; justify-content: center; z-index: 9999; display: none; }
+  .lightbox.show { display: flex; }
+  .lightbox img { max-width: 92vw; max-height: 85vh; border-radius: 12px; object-fit: contain; }
+  .lightbox .lb-close { position: absolute; top: 16px; right: 20px; color: white; font-size: 32px; cursor: pointer; }
+
+  /* floating CTA */
+  .fcta { position: fixed; bottom: 20px; right: 20px; z-index: 888; display: none; }
+  .fcta.show { display: block; }
+  .fcta a { display: flex; align-items: center; gap: 8px; background: var(--sage); color: white; padding: 12px 20px; border-radius: 30px; font-size: 14px; font-weight: 700; text-decoration: none; box-shadow: 0 6px 24px rgba(122,158,127,.45); animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{box-shadow:0 6px 24px rgba(122,158,127,.45)} 50%{box-shadow:0 6px 36px rgba(122,158,127,.7)} }
+
+  /* count-down ticker */
+  .ticker { background: var(--terrac); color: white; text-align: center; padding: 8px 24px; font-size: 12px; letter-spacing: 1px; animation: slideIn .5s ease; }
+  @keyframes slideIn { from{transform:translateY(-100%);opacity:0} to{transform:none;opacity:1} }
+  .ticker strong { color: #ffe; }
+
+  /* hero parallax */
+  .hero { position: relative; }
+  .hero-content { position: relative; z-index: 2; }
+
+  /* highlight cards hover */
+  .highlight-item { transition: background .3s; }
+  .highlight-item:hover { background: rgba(122,158,127,.05); border-radius: 10px; }
+
+  /* cert section image */
+  .cert-img { width: 100%; border-radius: 10px; margin-bottom: 10px; max-height: 160px; object-fit: cover; }
+
+  @media (max-width: 400px) {
+    .hero h1 { font-size: 26px; letter-spacing: 2px; }
+    .includes-grid { grid-template-columns: 1fr; }
+    .gallery { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- HERO -->
+<div class="hero-wrap">
+  <img class="hero-img" src="images/hero.jpg" alt="">
+  <div class="hero-content">
+  <div class="tag-top">7月17日—24日 · 南通 ✈ 伊宁 · 8天7晚</div>
+  <h1>童声唱享伊犁河</h1>
+  <div class="sub">伊犁亲子音乐研学营</div>
+  <div class="divider"></div>
+  <div class="tagline">用一首歌，打开伊犁</div>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker">🔥 早鸟名额倒计时 — 剩余 <strong>4组</strong>，6月20日零点起恢复原价 ¥16,800</div>
+
+<!-- PRICE BANNER -->
+<div class="price-banner">
+  <div class="label">一价全含 · 早鸟限额</div>
+  <div class="price-tag">
+    <span class="amount">¥15,800</span><span class="per">/人</span>
+    <span class="all">一价全含</span>
+  </div>
+  <div class="price-note">早鸟价限前<strong>10组</strong>家庭，6月20日零点起恢复¥16,800</div>
+  <div class="price-note" style="margin-top:4px;">大小同价 · 一价全含 · 无隐性消费</div>
+</div>
+
+<!-- HIGHLIGHTS -->
+<div class="section">
+  <h2><span class="icon">✦</span> 研学亮点</h2>
+</div>
+<div class="gallery">
+  <img src="images/gallery-01-dongbula.jpg" alt="冬不拉" onclick="openLightbox(this.src)">
+  <img src="images/gallery-02-bonfire.jpg" alt="篝火晚会" onclick="openLightbox(this.src)">
+  <img src="images/gallery-03-nalati-bonfire.jpg" alt="那拉提篝火" onclick="openLightbox(this.src)">
+  <img src="images/gallery-04-kazakh-music.jpg" alt="哈萨克音乐" onclick="openLightbox(this.src)">
+</div>
+<div class="highlights">
+  <div class="highlight-item">
+    <div class="highlight-icon">🎵</div>
+    <div class="highlight-text">
+      <h3>南通广播电视台全程跟拍</h3>
+      <p>官方平台播出，赠送纪录片级纪念视频</p>
+    </div>
+  </div>
+  <div class="highlight-item">
+    <div class="highlight-icon">📺</div>
+    <div class="highlight-text">
+      <h3>伊宁音乐馆深度探访</h3>
+      <p>探访伊宁音乐馆，打开伊犁音乐之门</p>
+    </div>
+  </div>
+  <div class="highlight-item">
+    <div class="highlight-icon">🪕</div>
+    <div class="highlight-text">
+      <h3>冬不拉非遗乐器制作体验</h3>
+      <p>非遗传承人当面讲解，亲手触摸千年乐器，亲子手作可带走</p>
+    </div>
+  </div>
+  <div class="highlight-item">
+    <div class="highlight-icon">🔥</div>
+    <div class="highlight-text">
+      <h3>新疆歌舞联欢篝火晚会</h3>
+      <p>专业舞者带领，家长孩子共跳黑走马</p>
+    </div>
+  </div>
+  <div class="highlight-item">
+    <div class="highlight-icon">🎓</div>
+    <div class="highlight-text">
+      <h3>伊宁南通两地认证研学证书</h3>
+      <p>两地盖章证书，官方认证研学经历</p>
+    </div>
+  </div>
+</div>
+
+<!-- WHO -->
+<div class="section" style="padding-top:20px;">
+  <h2><span class="icon">✦</span> 适合这样的家庭</h2>
+</div>
+<div class="who-list">
+  <div class="who-item"><span class="dot"></span>6-14岁孩子 + 家长亲子同行</div>
+  <div class="who-item"><span class="dot"></span>热爱音乐、喜欢体验式学习的家庭</div>
+  <div class="who-item"><span class="dot"></span>希望带孩子感受少数民族文化的家庭</div>
+  <div class="who-item"><span class="dot"></span>认可户外课堂、愿意让孩子在旅行中成长的家长</div>
+</div>
+
+<!-- ITINERARY -->
+<div class="section" style="padding-top:24px;">
+  <h2><span class="icon">✦</span> 每日行程</h2>
+</div>
+<div class="itinerary">
+
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-left">
+        <span class="day-num">Day 1</span>
+        <span class="day-title">伊宁</span>
+      </div>
+      <span class="day-stay">伊宁四星</span>
+    </div>
+    <div class="day-body">
+      <img class="section-img" src="images/day-01-yining.jpg" alt="伊宁" style="margin-bottom:8px;">
+      <div class="day-theme">温暖抵达 · 夜市 · 开营仪式</div>
+      <div class="day-detail">接机入住四星酒店，伊宁夜市体验（烤包子/酸奶/馕坑肉），开营仪式+研学任务护照。</div>
+    </div>
+  </div>
+
+    <div class="day-card">
+    <div class="day-header">
+      <div class="day-left">
+        <span class="day-num">Day 2</span>
+        <span class="day-title">赛里木湖</span>
+      </div>
+      <span class="day-stay">赛湖景区内</span>
+    </div>
+    <div class="day-body">
+      <img class="section-img" src="images/day-02-sayram.jpg" alt="赛里木湖" style="margin-bottom:8px;">
+      <div class="day-theme">全天环湖 · 放风筝 · 标本 · 星空露营</div>
+      <div class="day-detail">全天深度环湖（大西洋最后一滴眼泪），放风筝，植物标本制作，赛湖边星空露营。</div>
+    </div>
+  </div>
+
+    <div class="day-card">
+    <div class="day-header">
+      <div class="day-left">
+        <span class="day-num">Day 3</span>
+        <span class="day-title">果子沟+六星街+喀赞其</span>
+      </div>
+      <span class="day-stay">伊宁四星</span>
+    </div>
+    <div class="day-body">
+      <img class="section-img" src="images/day-03-guozigou.jpg" alt="六星街+果子沟" style="margin-bottom:8px;">
+      <div class="day-theme">果子沟大桥 + 手风琴博物馆 + 喀赞其</div>
+      <div class="day-detail">果子沟大桥打卡（最美公路桥），六星街手风琴博物馆，喀赞其蓝色维吾尔族民居+哈迪克马车。</div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-left">
+        <span class="day-num">Day 4</span>
+        <span class="day-title">伊宁</span>
+      </div>
+      <span class="day-stay">伊宁四星</span>
+    </div>
+    <div class="day-body">
+      <img class="section-img" src="images/day-04-music.jpg" alt="音乐研学" style="margin-bottom:8px;">
+      <div class="day-theme">纯音乐研学日 · 手风琴+民族音乐</div>
+      <div class="day-detail">手风琴深度体验（伊宁'手风琴之城'），俄罗斯族/哈萨克族/维吾尔族音乐融合课堂，沉浸式学习。</div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-left">
+        <span class="day-num">Day 5</span>
+        <span class="day-title">喀拉峻+特克斯</span>
+      </div>
+      <span class="day-stay">特克斯</span>
+    </div>
+    <div class="day-body">
+      <img class="section-img" src="images/day-05-kalajun.jpg" alt="喀拉峻+特克斯" style="margin-bottom:8px;">
+      <div class="day-theme">喀拉峻家访 · 挤羊奶 · 八卦城夜游</div>
+      <div class="day-detail">哈萨克族家访（手抓饭+包尔萨克），挤羊奶体验，学一句哈萨克语；晚上特克斯八卦城夜游。</div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-left">
+        <span class="day-num">Day 6</span>
+        <span class="day-title">那拉提</span>
+      </div>
+      <span class="day-stay">那拉提</span>
+    </div>
+    <div class="day-body">
+      <img class="section-img" src="images/day-06-nalati.jpg" alt="那拉提" style="margin-bottom:8px;">
+      <div class="day-theme">冬不拉弹唱 · 空中草原 · 篝火晚会</div>
+      <div class="day-detail">冬不拉弹唱学习（哈萨克族代表性乐器），空中草原骑马拍照；晚上篝火晚会+黑走马。</div>
+    </div>
+  </div>
+
+    <div class="day-card">
+    <div class="day-header">
+      <div class="day-left">
+        <span class="day-num">Day 7</span>
+        <span class="day-title">独库公路</span>
+      </div>
+      <span class="day-stay">乌鲁木齐</span>
+    </div>
+    <div class="day-body">
+      <img class="section-img" src="images/day-07-duku.jpg" alt="独库公路" style="margin-bottom:8px;">
+      <div class="day-theme">独库中北段穿越 + 乔尔玛 + 抵乌市</div>
+      <div class="day-detail">独库中北段穿越（一日看四季，十里不同天），乔尔玛烈士陵园致敬，抵达乌鲁木齐。</div>
+    </div>
+  </div>
+
+    <div class="day-card">
+    <div class="day-header">
+      <div class="day-left">
+        <span class="day-num">Day 8</span>
+        <span class="day-title">乌鲁木齐</span>
+      </div>
+      <span class="day-stay">—</span>
+    </div>
+    <div class="day-body">
+      <img class="section-img" src="images/day-08-urumqi.jpg" alt="乌鲁木齐" style="margin-bottom:8px;">
+      <div class="day-theme">送机 · 带着歌声回家</div>
+      <div class="day-detail">退房送机，带着歌声回家；研学纪录片+电子相册下载链接寄送。</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- 一价全含 -->
+<div class="section" style="padding-top:24px;">
+  <h2><span class="icon">✦</span> 一价全含</h2>
+</div>
+<div class="includes-grid">
+  <div class="include-item"><span class="check">✓</span>南通-伊宁往返机票（含税）</div>
+  <div class="include-item"><span class="check">✓</span>当地全程空调大巴</div>
+  <div class="include-item"><span class="check">✓</span>四星×7晚住宿</div>
+  <div class="include-item"><span class="check">✓</span>全程含餐（Day1晚至Day7晚）</div>
+  <div class="include-item"><span class="check">✓</span>行程所列景点门票活动费</div>
+  <div class="include-item"><span class="check">✓</span>冬不拉手作体验材料费</div>
+  <div class="include-item"><span class="check">✓</span>篝火晚会场地+专业舞者</div>
+  <div class="include-item"><span class="check">✓</span>南通广电随队拍摄+纪录片</div>
+  <div class="include-item"><span class="check">✓</span>研学险+两地盖章研学证书</div>
+  <div class="include-item"><span class="check">✓</span>研学任务护照+电子相册</div>
+</div>
+
+<!-- 报名须知 -->
+<div class="section" style="padding-top:20px;">
+  <h2><span class="icon">✦</span> 报名须知</h2>
+</div>
+<div class="notice-list">
+  <div class="notice-item"><span class="dot"></span>每组家庭需签订安全协议+肖像授权书</div>
+  <div class="notice-item"><span class="dot"></span>草原温差大（白天25°/夜间10°），请备好冲锋衣</div>
+  <div class="notice-item"><span class="dot"></span>部分草原段无手机信号，主办方配对讲机</div>
+  <div class="notice-item"><span class="dot"></span>伊宁时差比南通晚2小时</div>
+  <div class="notice-item"><span class="dot"></span>大小同价</div>
+  <div class="notice-item"><span class="dot"></span>一价全含，无隐性消费</div>
+</div>
+
+<!-- CERTIFICATE -->
+<div class="cert-section">
+  <h2>伊宁 + 南通两地盖章认证研学证书</h2>
+  <div class="cert-grid">
+    <div class="cert-card">
+      <h3>一份研学证书<br>两地名章</h3>
+      <p>伊宁青少年活动中心 + 南通盖章认证</p>
+    </div>
+    <div class="cert-card">
+      <h3>证书含</h3>
+      <p>营员姓名 / 营期时间 / 活动名称 / 两地官方盖章</p>
+    </div>
+  </div>
+  <p class="cert-note">一份研学证书，伊宁官方机构盖章 + 南通官方机构盖章，两地认证研学经历</p>
+</div>
+
+<!-- STEPS -->
+<div class="section" style="padding-top:8px;">
+  <h2><span class="icon">✦</span> 如何报名？</h2>
+</div>
+<div class="steps-section">
+  <div class="step-item">
+    <div class="step-num">1</div>
+    <div class="step-content">
+      <h4>联系顾问</h4>
+      <p>添加七彩和弦课程顾问微信，告知"我要报名新疆研学营"</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">2</div>
+    <div class="step-content">
+      <h4>缴纳定金</h4>
+      <p>早鸟名额以定金到账为准，支付3,000元/人定金锁定名额</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">3</div>
+    <div class="step-content">
+      <h4>签署协议</h4>
+      <p>签署研学协议+安全协议+肖像授权书</p>
+    </div>
+  </div>
+  <div class="step-item">
+    <div class="step-num">4</div>
+    <div class="step-content">
+      <h4>等待出行</h4>
+      <p>出发前30天建群，发放行前通知+Checklist</p>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <h2>名额有限，早鸟即将满员</h2>
+  <p>联系七彩和弦童声学院课程顾问报名</p>
+  <a href="#" class="cta-btn">立即咨询</a>
+  <p class="cta-note">早鸟价 ¥15,800 一价全含 · 限前10组家庭</p>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="org">联合出品：南通广电国旅 × 七彩和弦童声学院</div>
+  <p>2026年7月17日—24日 · 伊犁8天7夜亲子音乐研学营</p>
+</div>
+
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="this.classList.remove('show')">
+  <span class="lb-close">&times;</span>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<!-- FLOATING CTA -->
+<div class="fcta" id="fcta">
+  <a href="javascript:void(0)" onclick="document.querySelector('.cta-btn').scrollIntoView({behavior:'smooth'})">立即咨询 ✦</a>
+</div>
+
+<script>
+// lightbox
+function openLightbox(src) {
+  var lb = document.getElementById('lightbox');
+  document.getElementById('lb-img').src = src;
+  lb.classList.add('show');
+}
+
+// fade-in on scroll
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+  });
+}, {threshold: .12});
+document.querySelectorAll('.section,.highlights,.itinerary,.includes-grid,.cert-section,.steps-section,.gallery').forEach(function(el) {
+  el.classList.add('fade-up');
+  observer.observe(el);
+});
+
+// floating CTA after scroll past hero
+var fcta = document.getElementById('fcta');
+window.addEventListener('scroll', function() {
+  fcta.classList.toggle('show', window.scrollY > 480);
+}, {passive: true});
+
+
+</script>
+</body>
+</html>
