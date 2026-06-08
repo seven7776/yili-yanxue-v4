@@ -153,6 +153,50 @@
   .cert-card p { color: var(--muted); font-size: 10px; }
   .cert-note { font-size: 10px; color: var(--muted); margin-top: 10px; font-style: italic; }
 
+  /* Contact (校区客服) */
+  .contact-card {
+    margin: 0 24px 8px;
+    background: var(--cream);
+    border: 1px solid var(--sand-dk);
+    border-radius: var(--radius);
+    padding: 20px 18px 18px;
+    text-align: center;
+  }
+  .contact-qr {
+    display: inline-block;
+    background: var(--white);
+    padding: 6px;
+    border-radius: 10px;
+    border: 1px solid var(--sand-dk);
+  }
+  .contact-qr img { width: 140px; height: 140px; display: block; }
+  .contact-qr-tip {
+    font-size: 11px; color: var(--muted);
+    margin-top: 10px; line-height: 1.6;
+  }
+  .contact-list {
+    margin-top: 14px;
+    border-top: 1px dashed var(--sand-dk);
+    padding-top: 12px;
+  }
+  .contact-item {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 11px 14px;
+    background: var(--white);
+    border-radius: 8px;
+    margin-bottom: 6px;
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 14px;
+    border: 1px solid var(--sand-dk);
+  }
+  .contact-item:last-child { margin-bottom: 0; }
+  .contact-name { color: var(--sage); font-weight: 600; }
+  .contact-phone {
+    color: var(--dark); font-weight: 700;
+    font-size: 15px; letter-spacing: 0.5px;
+  }
+
   /* Steps */
   .steps-section { padding: 8px 24px; }
   .step-item { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
@@ -502,6 +546,31 @@
   <p class="cert-note">一份研学证书，伊宁官方机构盖章 + 南通官方机构盖章，两地认证研学经历</p>
 </div>
 
+<!-- 校区客服 -->
+<div class="section" style="padding-top:20px;">
+  <h2><span class="icon">✦</span> 校区客服</h2>
+</div>
+<div class="contact-card">
+  <div class="contact-qr">
+    <img src="images/qrcode.jpg" alt="客服微信二维码">
+  </div>
+  <div class="contact-qr-tip">长按识别二维码 · 加客服微信</div>
+  <div class="contact-list">
+    <a href="tel:15306295776" class="contact-item">
+      <span class="contact-name">湘湘老师</span>
+      <span class="contact-phone">153 0629 5776</span>
+    </a>
+    <a href="tel:15371929776" class="contact-item">
+      <span class="contact-name">蕾蕾老师</span>
+      <span class="contact-phone">153 7192 9776</span>
+    </a>
+    <a href="tel:15371959776" class="contact-item">
+      <span class="contact-name">橘子老师</span>
+      <span class="contact-phone">153 7195 9776</span>
+    </a>
+  </div>
+</div>
+
 <!-- STEPS -->
 <div class="section" style="padding-top:8px;">
   <h2><span class="icon">✦</span> 如何报名？</h2>
@@ -578,7 +647,7 @@ var observer = new IntersectionObserver(function(entries) {
     if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
   });
 }, {threshold: .12});
-document.querySelectorAll('.section,.highlights,.itinerary,.includes-grid,.cert-section,.steps-section,.gallery').forEach(function(el) {
+document.querySelectorAll('.section,.highlights,.itinerary,.includes-grid,.cert-section,.steps-section,.gallery,.contact-card').forEach(function(el) {
   el.classList.add('fade-up');
   observer.observe(el);
 });
