@@ -88,6 +88,42 @@
     vertical-align: -1px;
   }
 
+  /* Partner Strip — 提前展示专业合作单位 */
+  .partner-strip {
+    background: var(--cream);
+    border-bottom: 1px solid var(--sand-dk);
+    padding: 14px 20px 12px;
+    text-align: center;
+  }
+  .partner-strip .tag {
+    display: inline-block;
+    font-size: 10px;
+    color: var(--sage);
+    letter-spacing: 3px;
+    font-weight: 700;
+    background: var(--sand);
+    padding: 3px 12px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+  }
+  .partner-strip .orgs {
+    font-size: 14px;
+    color: var(--dark);
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  .partner-strip .orgs .x {
+    color: var(--terrac);
+    font-weight: 600;
+    margin: 0 8px;
+  }
+  .partner-strip .sub {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    margin-top: 4px;
+  }
+
   /* Price Banner */
   .price-banner { background: var(--sand); padding: 28px 24px; text-align: center; }
   .price-banner .label { font-size: 12px; color: var(--muted); letter-spacing: 2px; margin-bottom: 12px; }
@@ -304,6 +340,13 @@
   </div>
 </div>
 
+<!-- PARTNER STRIP — 提前展示专业合作单位（让家长第一眼就看到资深专业旅游领队） -->
+<div class="partner-strip">
+  <div class="tag">专业合作</div>
+  <div class="orgs">南通广电国旅<span class="x">×</span>七彩和弦童声学院</div>
+  <div class="sub">30年专业旅游 · 少儿声乐领军</div>
+</div>
+
 <!-- DAY STRIP -->
 <div class="day-strip">
   <div class="day-date">2026.7.17 → 7.24</div>
@@ -321,7 +364,7 @@
     <span class="all">一价全含</span>
   </div>
   <div class="price-note">早鸟 <strong>6/20 零点截止</strong>，起恢复¥16,800</div>
-  <div class="price-note" style="margin-top:8px; color: var(--dark); font-weight: 600;">💫 12 岁以下不占床 <span style="color: var(--dark); font-size: 17px; font-weight: 700;">¥13,800/人</span></div>
+  <div class="price-note" style="margin-top:8px; color: var(--dark); font-weight: 600;">💫 12 岁以下不占床 早鸟 <span style="color: var(--dark); font-size: 17px; font-weight: 700;">¥13,800/人</span> · 6/20 起 <span style="color: var(--dark); font-size: 17px; font-weight: 700;">¥14,800/人</span></div>
   <div class="price-note" style="margin-top:4px;">一价全含 · 无隐性消费</div>
 </div>
 
@@ -368,7 +411,7 @@
     <div class="highlight-icon">🎓</div>
     <div class="highlight-text">
       <h3>研学证书</h3>
-      <p>证书含：南通广播电视台盖章</p>
+      <p>证书含：伊宁+南通两地盖章</p>
     </div>
   </div>
 </div>
@@ -396,12 +439,12 @@
         <span class="day-num">Day 1</span>
         <span class="day-title">伊宁</span>
       </div>
-      <span class="day-stay">伊宁花城或同级</span>
+      <span class="day-stay">伊宁花城酒店或同级</span>
     </div>
     <div class="day-body">
       <img class="section-img" src="images/day-01-yining.jpg" alt="伊宁" style="margin-bottom:8px;">
       <div class="day-theme">南通→上海 · 上海直飞伊宁 · 夜市 · 开营</div>
-      <div class="day-detail">上海→伊宁航班抵达后接机，入住伊宁花城或同级酒店；伊宁夜市体验（烤包子/酸奶/馕坑肉），开营仪式+研学任务护照。</div>
+      <div class="day-detail">上海→伊宁航班抵达后接机，入住伊宁花城酒店或同级酒店；伊宁夜市体验（烤包子/酸奶/馕坑肉），开营仪式+研学任务护照。</div>
     </div>
   </div>
 
@@ -411,7 +454,7 @@
         <span class="day-num">Day 2</span>
         <span class="day-title">赛里木湖</span>
       </div>
-      <span class="day-stay">赛湖水云杉或同级</span>
+      <span class="day-stay">赛湖水云杉酒店或同级</span>
     </div>
     <div class="day-body">
       <img class="section-img" src="images/day-02-sayram.jpg" alt="赛里木湖" style="margin-bottom:8px;">
@@ -426,7 +469,7 @@
         <span class="day-num">Day 3</span>
         <span class="day-title">果子沟+六星街+喀赞其</span>
       </div>
-      <span class="day-stay">伊宁花城或同级</span>
+      <span class="day-stay">伊宁花城酒店或同级</span>
     </div>
     <div class="day-body">
       <img class="section-img" src="images/day-03-guozigou.jpg" alt="六星街+果子沟" style="margin-bottom:8px;">
@@ -441,7 +484,7 @@
         <span class="day-num">Day 4</span>
         <span class="day-title">伊宁</span>
       </div>
-      <span class="day-stay">伊宁花城或同级</span>
+      <span class="day-stay">伊宁花城酒店或同级</span>
     </div>
     <div class="day-body">
       <img class="section-img" src="images/day-04-songs.jpg" alt="歌曲研学" style="margin-bottom:8px;">
@@ -456,7 +499,7 @@
         <span class="day-num">Day 5</span>
         <span class="day-title">喀拉峻+特克斯</span>
       </div>
-      <span class="day-stay">特克斯美豪丽致或同级</span>
+      <span class="day-stay">特克斯美豪丽致酒店或同级</span>
     </div>
     <div class="day-body">
       <img class="section-img" src="images/day-05-kalajun.jpg" alt="喀拉峻+特克斯" style="margin-bottom:8px;">
@@ -471,7 +514,7 @@
         <span class="day-num">Day 6</span>
         <span class="day-title">那拉提</span>
       </div>
-      <span class="day-stay">那拉提花海或同级</span>
+      <span class="day-stay">那拉提花海酒店或同级</span>
     </div>
     <div class="day-body">
       <img class="section-img" src="images/day-06-nalati.jpg" alt="那拉提" style="margin-bottom:8px;">
@@ -486,7 +529,7 @@
         <span class="day-num">Day 7</span>
         <span class="day-title">独库公路</span>
       </div>
-      <span class="day-stay">乌市九源或同级</span>
+      <span class="day-stay">乌市九源酒店或同级</span>
     </div>
     <div class="day-body">
       <img class="section-img" src="images/day-07-duku.jpg" alt="独库公路" style="margin-bottom:8px;">
@@ -546,12 +589,12 @@
   <h2>权威研学证书</h2>
   <div class="cert-grid">
     <div class="cert-card">
-      <h3>南通广播电视台盖章</h3>
-      <p>深红章 · 官方认证研学经历</p>
+      <h3>南通盖章</h3>
+      <p>深红章 · 官方权威认证</p>
     </div>
     <div class="cert-card">
-      <h3>伊宁市文化和旅游局盖章</h3>
-      <p>深蓝章 · 官方认证研学经历</p>
+      <h3>伊宁盖章</h3>
+      <p>深蓝章 · 官方权威认证</p>
     </div>
   </div>
   <div class="cert-note">证书含：营员姓名 / 营期时间 / 活动名称</div>
