@@ -134,22 +134,26 @@
   .price-note { font-size: 12px; color: var(--muted); margin-top: 6px; }
   .price-note strong { color: var(--terrac); }
 
-  /* 儿童双价 — pill + 箭头 */
+  /* 儿童双价 — 手机优先 2 行：标签一行 + 价格一行 */
   .child-price-row {
     margin-top: 10px;
-    display: flex; align-items: center; justify-content: center;
-    gap: 6px; flex-wrap: wrap;
-    font-size: 12px; color: var(--dark);
+    text-align: center;
     background: rgba(255,255,255,.55);
     padding: 9px 10px;
     border-radius: 10px;
     border: 1px dashed var(--sand-dk);
   }
   .child-tag {
+    display: block;
     font-weight: 700;
     color: var(--terrac);
-    margin-right: 4px;
     font-size: 12px;
+    margin-bottom: 6px;
+  }
+  .child-prices {
+    display: flex; align-items: center; justify-content: center;
+    gap: 6px; flex-wrap: wrap;
+    font-size: 12px; color: var(--dark);
   }
   .child-pill {
     background: white;
@@ -497,10 +501,12 @@
   </div>
   <div class="price-note">早鸟 <strong>6/20 零点截止</strong>，起恢复¥16,800</div>
   <div class="child-price-row">
-    <span class="child-tag">💫 12 岁以下不占床</span>
-    <span class="child-pill">早鸟 <b>¥13,800</b>/人</span>
-    <span class="child-arrow">→</span>
-    <span class="child-pill">6/20 起 <b>¥14,800</b>/人</span>
+    <div class="child-tag">💫 12 岁以下不占床</div>
+    <div class="child-prices">
+      <span class="child-pill">早鸟 <b>¥13,800</b>/人</span>
+      <span class="child-arrow">→</span>
+      <span class="child-pill">6/20 起 <b>¥14,800</b>/人</span>
+    </div>
   </div>
   <div class="price-note" style="margin-top:4px;">一价全含 · 无隐性消费</div>
 </div>
