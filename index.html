@@ -23,16 +23,70 @@
   body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--cream); color: var(--dark); line-height: 1.8; }
   .container { max-width: 600px; margin: 0 auto; background: var(--white); }
 
-  /* Hero */
+  /* Hero - cream 底与下方 day-card 同色系 */
   .hero {
-    background: linear-gradient(160deg, #7A9E7F 0%, #5C7F60 40%, #4A6350 100%);
-    color: white; padding: 48px 32px 44px; text-align: center;
+    background: var(--cream);
+    color: var(--dark);
+    padding: 32px 24px 0;
+    text-align: center;
   }
-  .hero .tag-top { font-size: 12px; letter-spacing: 3px; opacity: 0.75; margin-bottom: 18px; }
-  .hero h1 { font-size: 30px; font-weight: 800; letter-spacing: 4px; margin-bottom: 6px; }
-  .hero .sub { font-size: 14px; opacity: 0.85; margin-bottom: 20px; }
-  .hero .divider { width: 40px; height: 2px; background: rgba(255,255,255,0.4); margin: 0 auto 20px; border-radius: 2px; }
-  .hero .tagline { display: inline-block; background: rgba(255,255,255,0.15); padding: 8px 24px; border-radius: 24px; font-size: 13px; letter-spacing: 1px; }
+  .hero-eyebrow {
+    font-size: 11px; color: var(--sage);
+    letter-spacing: 3px; font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .hero-eyebrow::before, .hero-eyebrow::after {
+    content: "—"; color: var(--sand-dk);
+    margin: 0 8px; font-weight: 400; letter-spacing: 0;
+  }
+  .hero h1 {
+    font-size: 32px; font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 6px;
+    color: var(--dark);
+  }
+  .hero .sub {
+    font-size: 13px; color: var(--muted);
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+  }
+  .hero-image-wrap {
+    margin: 0 -24px;
+    position: relative;
+    overflow: hidden;
+    height: 240px;
+    border-top: 1px solid var(--sand-dk);
+    border-bottom: 1px solid var(--sand-dk);
+  }
+  .hero-image {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .hero-image-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 55%, rgba(250,248,244,.85) 100%);
+    display: flex; align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 16px;
+  }
+  .hero-tagline {
+    color: var(--dark);
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    background: rgba(255,255,255,.92);
+    padding: 6px 18px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  }
+  .hero-tagline .quote {
+    color: var(--sage);
+    font-weight: 800;
+    font-size: 18px;
+    vertical-align: -1px;
+  }
 
   /* Price Banner */
   .price-banner { background: var(--sand); padding: 28px 24px; text-align: center; }
@@ -189,14 +243,15 @@
 <div class="container">
 
 <!-- HERO -->
-<div class="hero-wrap">
-  <img class="hero-img" src="images/hero.jpg" alt="">
-  <div class="hero-content">
-  <div class="tag-top">7月17日—24日 · 南通 ✈ 伊宁 · 8天7晚</div>
+<div class="hero">
+  <div class="hero-eyebrow">2026 SUMMER · YILI</div>
   <h1>童声唱享伊犁河</h1>
-  <div class="sub">伊犁亲子音乐研学营</div>
-  <div class="divider"></div>
-  <div class="tagline">用一首歌，打开伊犁</div>
+  <div class="sub">8天7夜 · 亲子音乐研学营</div>
+  <div class="hero-image-wrap">
+    <img class="hero-image" src="images/hero.jpg" alt="伊犁">
+    <div class="hero-image-overlay">
+      <div class="hero-tagline"><span class="quote">"</span>用一首歌，打开伊犁<span class="quote">"</span></div>
+    </div>
   </div>
 </div>
 
