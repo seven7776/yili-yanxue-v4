@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>童声唱享伊犁河 · 2026 暑期亲子音乐研学营</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--cream:#FAF8F4;--sand:#E8DFD0;--sd:#D4C5A9;--sage:#5C7A60;--gold:#B8923E;--terrac:#9C5D44;--dark:#1F2A22}
+body{background:var(--sd);font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;-webkit-text-size-adjust:100%;color:var(--dark)}
+.page{width:100%;max-width:480px;margin:0 auto;background:var(--cream)}
+img{display:block;width:100%}
+.hero{position:relative;overflow:hidden}
+.hero img{aspect-ratio:3/4;object-fit:cover;object-position:center 25%}
+.hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:60%;background:linear-gradient(to top,rgba(40,32,20,.75),rgba(40,32,20,.30) 45%,transparent);pointer-events:none}
+.htxt{position:absolute;bottom:0;left:0;right:0;padding:0 24px 32px;z-index:2}
+.htag{display:inline-block;background:var(--terrac);color:#fff;font-size:14px;font-weight:700;letter-spacing:3px;padding:5px 12px;border-radius:3px;margin-bottom:10px}
+.htitle{font-size:36px;font-weight:900;color:#fff;letter-spacing:4px;line-height:1.05;text-shadow:0 2px 10px rgba(0,0,0,.4)}
+.hsub{font-size:18px;color:var(--sand);letter-spacing:3px;margin-top:8px}
+.hdate{font-size:18px;color:rgba(255,255,255,.88);letter-spacing:2px;margin-top:6px}
+.ps{background:var(--cream);border-top:1px solid var(--sd);border-bottom:1px solid var(--sd);padding:12px 20px;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
+.ps .l{font-size:13px;color:var(--sage);letter-spacing:2px;font-weight:700;background:var(--sand);padding:3px 9px;border-radius:3px}
+.ps .n{font-size:13px;color:var(--dark);font-weight:700;letter-spacing:1.5px}
+.ps .x{color:var(--sd);font-size:13px}
+.ds{background:var(--gold);color:#fff;text-align:center;padding:10px 24px;font-size:16px;font-weight:700;letter-spacing:4px}
+.tk{background:var(--terrac);color:#fff;text-align:center;padding:8px 24px;font-size:13px;letter-spacing:1.5px}
+.sec{padding:22px 24px 20px}
+.sec.cream{background:var(--cream)}
+.sec.sand{background:var(--sand)}
+.sh{font-size:14px;font-weight:700;color:var(--sage);letter-spacing:4px;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.sh::after{content:"";flex:1;height:1px;background:var(--sd)}
+.psec{background:var(--sand);padding:24px}
+.pcard{background:var(--cream);border-radius:12px;padding:18px 20px;text-align:center;box-shadow:0 2px 8px rgba(120,100,80,.1)}
+.peyebrow{font-size:14px;color:var(--sage);letter-spacing:3px;font-weight:700}
+.pmain{font-size:38px;font-weight:900;color:var(--terrac);letter-spacing:1px;line-height:1.1;margin-top:4px}
+.pdead{font-size:14px;color:var(--dark);margin-top:6px;letter-spacing:1px}
+.pdead strong{color:var(--terrac)}
+.prow{display:flex;gap:10px;margin-top:14px}
+.pchild{flex:1;background:var(--cream);border:1px solid var(--sd);border-radius:8px;padding:10px 6px;text-align:center}
+.pcl{font-size:13px;color:var(--dark);letter-spacing:1px;line-height:1.3}
+.pcv{font-size:17px;font-weight:800;color:var(--terrac);margin-top:4px;letter-spacing:.5px}
+.pcs{font-size:12px;color:var(--sage);margin-top:2px}
+.ppill{display:inline-block;background:var(--sage);color:#fff;padding:6px 18px;border-radius:20px;font-size:14px;letter-spacing:2px;margin-top:14px}
+.combo-row{display:flex;gap:10px;margin-top:14px}
+.ccard{flex:1;background:var(--cream);border:1px solid var(--sd);border-radius:8px;padding:10px;text-align:center}
+.clab{font-size:13px;color:var(--dark);letter-spacing:1px}
+.cpr{font-size:18px;font-weight:800;color:var(--terrac);margin-top:3px}
+.cnt{font-size:12px;color:var(--sage);margin-top:2px;letter-spacing:.5px}
+.iti{background:var(--cream);padding:4px 18px 4px 24px}
+.dlist{display:flex;flex-direction:column}
+.di{display:block;padding:0 0 9px 0;border-bottom:1px dashed var(--sd);margin-bottom:9px}
+.di:last-child{margin-bottom:0}
+.di-sum{display:flex;align-items:center;gap:12px;list-style:none;cursor:pointer;padding:9px 0}
+.di-sum::-webkit-details-marker{display:none}
+.di-sum::marker{display:none}
+.di-sum:hover{background:rgba(184,146,62,.06);border-radius:6px;padding-left:6px;padding-right:6px;margin-left:-6px;margin-right:-6px}
+.di-expand{padding:8px 12px 14px 12px;background:var(--cream);border-left:3px solid var(--terrac);border-radius:0 6px 6px 0;margin:4px 0 0 60px;font-size:13px;line-height:1.7;color:var(--dark);letter-spacing:.3px}
+.di:last-child{border-bottom:0}
+.db{width:60px;flex-shrink:0;text-align:center;padding-top:2px}
+.db .n{font-size:15px;font-weight:900;color:var(--terrac);letter-spacing:1px}
+.db .l{font-size:14px;font-weight:700;color:var(--dark);margin-top:2px;letter-spacing:.5px;line-height:1.2}
+.dbod{flex:1;min-width:0}
+.dl{font-size:18px;font-weight:900;color:var(--terrac);letter-spacing:1px;line-height:1.2;margin-bottom:3px}
+.dn{font-size:14px;font-weight:800;color:var(--sage);letter-spacing:2px;margin-bottom:6px;padding-bottom:6px;border-bottom:1px solid var(--sd)}
+.di-img{width:160px;height:120px;object-fit:cover;border-radius:4px;flex-shrink:0;display:block}
+.dt{font-size:15px;font-weight:700;color:var(--dark);line-height:1.35}
+.dh{font-size:13px;color:var(--sage);margin-top:3px;letter-spacing:.5px}
+.hl{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.hli{background:var(--sand);border-radius:8px;padding:10px 12px;font-size:14px;color:var(--dark);line-height:1.4;border-left:2px solid var(--terrac)}
+.mp{background:#fff;padding:24px 24px 8px}
+.mp img{aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+.cert{background:var(--cream);padding:16px 24px 24px;text-align:center;border-top:1px solid var(--sd)}
+.ctit{font-size:16px;font-weight:700;color:var(--dark);letter-spacing:2px}
+.csub{font-size:14px;color:var(--sage);margin-top:4px;letter-spacing:1.5px}
+.cstamps{display:flex;justify-content:center;gap:24px;margin-top:16px}
+.st{width:80px;height:80px;border-radius:50%;border:2px solid;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;letter-spacing:1px;text-align:center;line-height:1.2;padding:4px}
+.st.r{color:#A8202A;border-color:#A8202A}
+.st.b{color:#0E3A66;border-color:#0E3A66}
+.cs{background:var(--sand);padding:24px;border-top:1px solid var(--sd)}
+.chdr{text-align:center;font-size:14px;color:var(--sage);font-weight:700;letter-spacing:3px;margin-bottom:16px}
+.qrrow{display:flex;gap:10px;justify-content:center}
+.qrc{flex:1;max-width:130px;background:#fff;border-radius:8px;padding:8px 6px 10px;text-align:center;box-shadow:0 2px 6px rgba(120,100,80,.1)}
+.qrc img{aspect-ratio:1/1;object-fit:contain;background:#fff}
+.qrn{font-size:14px;font-weight:700;color:var(--dark);margin-top:6px;letter-spacing:1px}
+.qrt{display:inline-block;font-size:12px;color:var(--terrac);margin-top:4px;letter-spacing:.5px;text-decoration:none}
+.org{background:var(--cream);padding:16px 24px 24px;text-align:center;border-top:1px solid var(--sd)}
+.on{font-size:14px;font-weight:700;color:var(--dark);letter-spacing:2px}
+.os{font-size:13px;color:var(--sage);margin-top:4px;letter-spacing:1px}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="hero">
+    <img src="images/hero.jpg" alt="">
+    <div class="htxt">
+      <div class="htag">2026 暑期亲子研学</div>
+      <div class="htitle">童声唱享伊犁河</div>
+      <div class="hsub">8天7夜 · 亲子音乐研学营</div>
+      <div class="hdate">7月17日 — 24日 · 南通 ✈ 伊宁</div>
+    </div>
+  </div>
+  <div class="ps">
+    <span class="l">30 年专业旅游</span>
+    <span class="n">南通广电国旅</span>
+    <span class="x">×</span>
+    <span class="n">七彩和弦童声学院</span>
+  </div>
+  <div class="ds">7.17 → 7.24 · 共 8 天 7 夜</div>
+  <div class="tk">⏰ 早鸟限时 · 6 月 20 日零点截止</div>
+  <div class="sec sand">
+    <div class="sh">价格方案</div>
+    <div class="pcard">
+      <div class="peyebrow">成人早鸟价</div>
+      <div class="pmain">¥15,800 /人</div>
+      <div class="pdead">6月20日零点起恢复 <strong>¥16,800</strong></div>
+      <div class="prow">
+        <div class="pchild">
+          <div class="pcl">12岁以下<br>不占床·早鸟</div>
+          <div class="pcv">¥13,800</div>
+          <div class="pcs">/人</div>
+        </div>
+        <div class="pchild">
+          <div class="pcl">12岁以下<br>不占床·正价</div>
+          <div class="pcv">¥14,800</div>
+          <div class="pcs">6.20起</div>
+        </div>
+      </div>
+      <div class="ppill">一价全含 · 无隐性消费</div>
+    </div>
+    <div class="combo-row">
+      <div class="ccard">
+        <div class="clab">一大一小</div>
+        <div class="cpr">¥29,600</div>
+        <div class="cnt">家庭套餐</div>
+      </div>
+      <div class="ccard">
+        <div class="clab">两大一小</div>
+        <div class="cpr">¥45,400</div>
+        <div class="cnt">10 组成团</div>
+      </div>
+    </div>
+  </div>
+  <div class="mp">
+    <img src="images/route-map.jpg" alt="8天7夜路线">
+  </div>
+  <div class="sec cream">
+    <div class="sh">8 天行程</div>
+    <div class="iti">
+      <div class="dlist">
+        <details class="di"><summary class="di-sum"><div class="dbod"><div class="dl">伊宁</div><div class="dn">Day 1</div><div class="dt">南通→上海→伊宁 · 开营</div><div class="dh">伊宁花城酒店或同级</div></div><img class="di-img" src="images/day/day-01-yining.jpg" alt=""></summary><div class="di-expand">交通：南通→上海→伊宁（2+1 大巴转机）<br>晚上：伊宁夜市（烤包子/酸奶/馕坑肉）<br>仪式：开营 + 研学任务护照<br>餐饮：哈萨克族欢迎宴</div></details>
+        <details class="di"><summary class="di-sum"><div class="dbod"><div class="dl">赛里木湖</div><div class="dn">Day 2</div><div class="dt">环湖·风筝·星空露营</div><div class="dh">水云杉酒店或同级</div></div><img class="di-img" src="images/day/day-02-sayram.jpg" alt=""></summary><div class="di-expand">核心：全天环湖 + 放风筝 + 植物标本<br>特色：星空露营（湖边扎营，专业户外领队保障）<br>拍摄：湖光山色/雪山倒影/星空</div></details>
+        <details class="di"><summary class="di-sum"><div class="dbod"><div class="dl">果子沟</div><div class="dn">Day 3</div><div class="dt">大桥·六星街·喀赞其</div><div class="dh">伊宁花城酒店或同级</div></div><img class="di-img" src="images/day/day-03-guozigou.jpg" alt=""></summary><div class="di-expand">上午：果子沟大桥打卡（雪山+森林+峡谷）<br>下午：六星街手风琴博物馆 + 喀赞其民俗区（蓝色民居+哈迪克马车）<br>亮点：自然景观 → 民族文化过渡</div></details>
+        <details class="di"><summary class="di-sum"><div class="dbod"><div class="dl">伊宁</div><div class="dn">Day 4</div><div class="dt">纯音乐研学日</div><div class="dh">伊宁花城酒店或同级</div></div><img class="di-img" src="images/day/day-04-songs.jpg" alt=""></summary><div class="di-expand">核心：手风琴深度体验（伊宁"手风琴之城"）<br>形式：哈/维/俄三族音乐融合 + 跟非遗传人学弹<br>特色：沉浸式音乐主题日</div></details>
+        <details class="di"><summary class="di-sum"><div class="dbod"><div class="dl">喀拉峻</div><div class="dn">Day 5</div><div class="dt">家访·挤羊奶·八卦城</div><div class="dh">特克斯美豪丽致酒店或同级</div></div><img class="di-img" src="images/day/day-05-kalajun.jpg" alt=""></summary><div class="di-expand">下午：喀拉峻哈萨克族家访（手抓饭+包尔萨克）+ 挤羊奶<br>晚上：八卦城夜游（世界唯一八卦形城市）<br>车程：伊宁→喀拉峻约 4 小时</div></details>
+        <details class="di"><summary class="di-sum"><div class="dbod"><div class="dl">那拉提</div><div class="dn">Day 6</div><div class="dt">冬不拉·空中草原·篝火</div><div class="dh">那拉提花海酒店或同级</div></div><img class="di-img" src="images/day/day-06-nalati.jpg" alt=""></summary><div class="di-expand">下午：那拉提空中草原 + 冬不拉弹唱<br>晚上：篝火晚会（哈族舞者领跳黑走马+家长孩子手拉手围圈+烟火秀）<br>亮点：全程出片高光</div></details>
+        <details class="di"><summary class="di-sum"><div class="dbod"><div class="dl">独库</div><div class="dn">Day 7</div><div class="dt">穿越天山·乔尔玛</div><div class="dh">乌市九源酒店或同级</div></div><img class="di-img" src="images/day/day-07-duku.jpg" alt=""></summary><div class="di-expand">核心：独库公路中北段穿越<br>景观："一日看四季"——雪岭云杉/达坂/草原/河谷<br>停留：乔尔玛烈士陵园（10 分钟致敬）</div></details>
+        <details class="di"><summary class="di-sum"><div class="dbod"><div class="dl">乌市</div><div class="dn">Day 8</div><div class="dt">送机 · 带着歌声回家</div><div class="dh">研学结束</div></div><img class="di-img" src="images/day/day-08-urumqi.jpg" alt=""></summary><div class="di-expand">上午：退房<br>送机：乌鲁木齐机场<br>结束：带着歌声回家<br>后续：研学纪录片 + 电子相册下载链接寄送</div></details>
+      </div>
+    </div>
+  </div>
+  <div class="sec cream" style="padding-top:0">
+    <div class="sh">研学亮点</div>
+    <div class="hl">
+      <div class="hli">南通广播电视台全程跟拍</div>
+      <div class="hli">官方平台播出纪念视频</div>
+      <div class="hli">伊宁传统音乐馆探访</div>
+      <div class="hli">冬不拉非遗乐器制作</div>
+      <div class="hli">新疆歌舞联欢篝火</div>
+      <div class="hli">两地盖章研学证书</div>
+    </div>
+  </div>
+  <div class="cert">
+    <div class="ctit">官方权威认证研学证书</div>
+    <div class="csub">伊宁 + 南通 两地盖章</div>
+    <div class="cstamps">
+      <div class="st r">南通<br>广播电视台</div>
+      <div class="st b">伊宁<br>文旅</div>
+    </div>
+  </div>
+  <div class="cs">
+    <div class="chdr">校区客服 · 长按图片扫码加好友</div>
+    <div class="qrrow">
+      <div class="qrc">
+        <img src="images/qrcode.jpg" alt="湘湘">
+        <div class="qrn">湘湘老师</div>
+        <a href="tel:15306295776" class="qrt">15306295776</a>
+      </div>
+      <div class="qrc">
+        <img src="images/qrcode-leilei.jpg" alt="蕾蕾">
+        <div class="qrn">蕾蕾老师</div>
+        <a href="tel:15371929776" class="qrt">15371929776</a>
+      </div>
+      <div class="qrc">
+        <img src="images/qrcode-orange.jpg" alt="橘子">
+        <div class="qrn">橘子老师</div>
+        <a href="tel:15371959776" class="qrt">15371959776</a>
+      </div>
+    </div>
+  </div>
+  <div class="org">
+    <div class="on">南通广电国旅 × 七彩和弦童声学院</div>
+    <div class="os">2026年7月17日—24日 · 伊犁 8天7夜亲子音乐研学</div>
+  </div>
+</div>
+</body>
+</html>
