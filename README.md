@@ -5,19 +5,20 @@
 
 ## 公网访问
 
-- 海报（手机单页）: https://seven7776.github.io/yili-yanxue-v4/poster.html
-- 详情页（v47）: https://seven7776.github.io/yili-yanxue-v4/
+[海报（手机单页）](https://seven7776.github.io/yili-yanxue-v4/poster.html)
+
+[详情页 v47](https://seven7776.github.io/yili-yanxue-v4/)
 
 ## 物料清单
 
-| 类型 | 源文件 | 渲染产物 |
-|---|---|---|
-| 正式海报 | `../正式海报.html` | `../正式海报_print.jpg` (5x 印刷级 2400×17600) |
-| 家长版详情页 | `index.html` | 公网 URL（v47） |
+- 正式海报源文件：`../正式海报.html`
+- 正式海报渲染产物：`../正式海报_print.jpg`（5x 印刷级 2400×17600）
+- 家长版详情页源文件：`index.html`（公网 v47）
 
 ## 投放文案
 
 见项目根：
+
 - `../../公众号文案.md`
 - `../../小红书文案.md`
 - `../../朋友圈文案.md`
